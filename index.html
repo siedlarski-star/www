@@ -209,7 +209,7 @@ body.lang-pl .pl-block{display:block;}
       <img src="3s.png" alt="Categories menu — Beginner and Advanced">
       <div class="screen-caption">
         <h3><span class="en">10+ categories, 2 levels</span><span class="pl">10+ kategorii, 2 poziomy</span></h3>
-        <p><span class="en">Beginner and Advanced categories. Each shows word count so you know exactly what you're getting. Save favorites to build your own list.</span><span class="pl">Kategorie Beginner i Advanced. Każda pokazuje liczbę słówek. Zapisuj ulubione do własnej listy.</span></p>
+        <p><span class="en">Two levels, 10+ categories — including the most popular DELE A1/A2 and B1/B2 vocabulary, so every word you learn actually counts. Each category shows the word count upfront, and you can save favorites to build your own personal list.</span><span class="pl">Dwa poziomy, 10+ kategorii — w tym najpopularniejsze słówka DELE A1/A2 i B1/B2, więc każde nauczone słówko ma realną wartość. Każda kategoria pokazuje liczbę słówek, a ulubione możesz zapisywać do własnej listy.</span></p>
       </div>
     </div>
     <div class="screen-card">
@@ -320,8 +320,8 @@ body.lang-pl .pl-block{display:block;}
     <span class="pl-block">Taniej niż batonik.<br><em>O wiele więcej wartości.</em></span>
   </h2>
   <p class="section-sub" style="margin-bottom:32px;">
-    <span class="en">For the price of a snack, unlock over 1,100 Spanish words across 18 categories. One-time purchase. No subscription. Yours forever.</span>
-    <span class="pl">Za cenę przekąski odblokowujesz ponad 1 100 słówek w 18 kategoriach. Jednorazowy zakup. Bez subskrypcji. Twoje na zawsze.</span>
+    <span class="en">For the price of a snack, unlock over 1,300 Spanish words across 20 categories — including DELE A1/A2 and B1/B2 vocabulary. One-time purchase. No subscription. Yours forever.</span>
+    <span class="pl">Za cenę przekąski odblokowujesz ponad 1 300 słówek w 20 kategoriach — w tym słownictwo DELE A1/A2 i B1/B2. Jednorazowy zakup. Bez subskrypcji. Twoje na zawsze.</span>
   </p>
   <div class="candy-price-tag">
     <div class="candy-price">$1.99</div>
@@ -362,7 +362,7 @@ body.lang-pl .pl-block{display:block;}
       <div class="price-big">$1.99</div>
       <div class="price-note2"><span class="en">One-time · yours forever</span><span class="pl">Jednorazowo · twoje na zawsze</span></div>
       <div class="no-ads-row">🚫 <span class="en">No ads — ever</span><span class="pl">Zero reklam — nigdy</span></div>
-      <div class="words-count">over 1,100 <span class="en">words total</span><span class="pl">słówek łącznie</span></div>
+      <div class="words-count">over 1,300 <span class="en">words total</span><span class="pl">słówek łącznie</span></div>
       <div class="categories-tags">
         <span class="cat-tag">Animals</span>
         <span class="cat-tag">Food</span>
@@ -382,6 +382,8 @@ body.lang-pl .pl-block{display:block;}
         <span class="cat-tag">Environment</span>
         <span class="cat-tag">Psychology</span>
         <span class="cat-tag">Culture</span>
+        <span class="cat-tag">DELE A1/A2</span>
+        <span class="cat-tag">DELE B1/B2</span>
       </div>
       <p class="plan-note"><span class="en">+ All future word packs — free forever.</span><span class="pl">+ Wszystkie przyszłe zestawy słówek — bezpłatnie na zawsze.</span></p>
       <a href="#" class="btn-plan premium"><span class="en">Unlock Premium — $1.99</span><span class="pl">Odblokuj Premium — $1.99</span></a>
@@ -414,6 +416,15 @@ body.lang-pl .pl-block{display:block;}
   <div class="footer-copy">© 2026 Igor Siedlarski</div>
 </footer>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+<script>
 function setLang(lang){
-  document.body.className="lang-"+lan
+  document.body.className="lang-"+lang;
+  document.querySelectorAll('.lang-btn').forEach(function(b){
+    b.classList.toggle('active', b.getAttribute('onclick')==="setLang('"+lang+"')");
+  });
+  localStorage.setItem('lang',lang);
+}
+(function(){var l=localStorage.getItem('lang')||'en';setLang(l);})();
+</script>
+</body>
+</html>
