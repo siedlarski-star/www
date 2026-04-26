@@ -319,24 +319,57 @@ body.lang-pl .pl-block{display:block;}
 <section class="section">
   <div class="section-label"><span class="en">What users say</span><span class="pl">Co mówią użytkownicy</span></div>
   <h2 class="section-title"><span class="en">People love it.</span><span class="pl">Ludzie to kochają.</span></h2>
-  <div class="testimonials-grid">
-    <div class="testimonial-card">
-      <div class="stars">★★★★★</div>
-      <p class="testimonial-text"><span class="en">"I've been using LingoBar for 3 months and I'm amazed at how many words I've picked up without even trying. It's just always there."</span><span class="pl">„Używam LingoBar od 3 miesięcy i jestem zaskoczony ile słówek przyswoiłem bez żadnego wysiłku. Po prostu zawsze tam jest."</span></p>
-      <div class="testimonial-author"><div class="author-avatar">M</div><div><div class="author-name">Marek W.</div></div></div>
-    </div>
-    <div class="testimonial-card">
-      <div class="stars">★★★★★</div>
-      <p class="testimonial-text"><span class="en">"Finally a language app that doesn't interrupt my work. No streaks, no guilt, no annoying notifications. Just quiet learning."</span><span class="pl">„W końcu aplikacja, która nie przeszkadza w pracy. Żadnych passów, żadnych wyrzutów sumienia. Po prostu spokojna nauka."</span></p>
-      <div class="testimonial-author"><div class="author-avatar">A</div><div><div class="author-name">Anna K.</div></div></div>
-    </div>
-    <div class="testimonial-card">
-      <div class="stars">★★★★★</div>
-      <p class="testimonial-text"><span class="en">"The $1.99 premium is genuinely the best money I've spent on language learning. More words than I expected, I use it every single day."</span><span class="pl">„Premium za 1,99$ to najlepiej wydane pieniądze na naukę języka. Więcej słówek niż się spodziewałem, używam tego każdego dnia."</span></p>
-      <div class="testimonial-author"><div class="author-avatar">P</div><div><div class="author-name">Piotr S.</div></div></div>
-    </div>
-  </div>
+  <div class="testimonials-grid" id="testimonials-grid"></div>
 </section>
+<script>
+(function(){
+  var reviews = [
+    {
+      name: "maj4d",
+      title: "Super",
+      text: "A great thing to learn something along the way."
+    },
+    {
+      name: "Kemalmus",
+      title: "Smart",
+      text: "Very smart approach to an otherwise straight-forward language learning method, love it!"
+    },
+    {
+      name: "lukborez",
+      title: "So simple, so helpful",
+      text: "Simple ideas work best. This is what actually improves my Spanish."
+    },
+    {
+      name: "ewa____",
+      title: "Great app",
+      text: "A truly great and helpful app."
+    },
+    {
+      name: "M.S_2006",
+      title: "A completely different approach",
+      text: "Great stuff. Learns vocabulary in the background, doesn't bother you with notifications and isn't as pushy as other language apps. Real results — words actually stick. Highly recommend."
+    }
+  ];
+
+  // shuffle and pick 3
+  var shuffled = reviews.slice().sort(function(){ return Math.random() - 0.5; });
+  var picked = shuffled.slice(0, 3);
+
+  var grid = document.getElementById('testimonials-grid');
+  picked.forEach(function(r){
+    var initial = r.name.charAt(0).toUpperCase();
+    grid.innerHTML += '<div class="testimonial-card">' +
+      '<div class="stars">★★★★★</div>' +
+      '<p class="testimonial-text">"' + r.text + '"</p>' +
+      '<div class="testimonial-author">' +
+        '<div class="author-avatar">' + initial + '</div>' +
+        '<div><div class="author-name">' + r.name + '</div>' +
+        '<div class="author-title">App Store · Mac</div></div>' +
+      '</div>' +
+    '</div>';
+  });
+})();
+</script>
 
 <!-- CANDY -->
 <section class="candy-section">
