@@ -109,7 +109,7 @@ h1 em{font-style:italic;background:linear-gradient(135deg,var(--accent),var(--ac
 .gif-caption{font-size:12px;color:var(--muted);}
 
 /* SECTIONS */
-.section{padding:52px 40px;max-width:1100px;margin:0 auto;}
+.section{padding:34px 40px;max-width:1100px;margin:0 auto;}
 .section-label{font-size:12px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--accent);margin-bottom:12px;text-align:center;}
 .section-title{font-family:"Instrument Serif",serif;font-size:clamp(32px,4vw,52px);text-align:center;line-height:1.1;margin-bottom:14px;letter-spacing:-1px;}
 .section-sub{text-align:center;color:var(--muted);font-size:17px;max-width:560px;margin:0 auto 44px;line-height:1.6;}
@@ -126,6 +126,8 @@ h1 em{font-style:italic;background:linear-gradient(135deg,var(--accent),var(--ac
 .screen-card{background:var(--surface);border:1px solid var(--border);border-radius:20px;overflow:hidden;transition:transform 0.3s,box-shadow 0.3s;}
 .screen-card:hover{transform:translateY(-4px);box-shadow:0 20px 60px rgba(0,0,0,0.4);}
 .screen-card img{width:100%;display:block;height:auto;}
+.video-wrap{position:relative;width:100%;aspect-ratio:16/9;border-radius:20px;overflow:hidden;border:1px solid var(--border);box-shadow:0 20px 60px rgba(0,0,0,0.4);}
+.video-wrap iframe{position:absolute;inset:0;width:100%;height:100%;border:0;}
 .screen-caption{padding:20px;}
 .screen-caption h3{font-size:16px;font-weight:600;margin-bottom:6px;}
 .screen-caption p{font-size:13px;color:var(--muted);line-height:1.6;}
@@ -182,7 +184,7 @@ h1 em{font-style:italic;background:linear-gradient(135deg,var(--accent),var(--ac
 .btn-plan.premium:hover{transform:translateY(-1px);box-shadow:0 12px 32px rgba(34,197,94,0.45);}
 
 /* FINAL CTA */
-.final-cta{padding:80px 40px;text-align:center;background:linear-gradient(135deg,rgba(34,197,94,0.08),rgba(134,239,172,0.05));border-top:1px solid var(--border);border-bottom:1px solid var(--border);margin-top:40px;}
+.final-cta{padding:52px 40px;text-align:center;background:linear-gradient(135deg,rgba(34,197,94,0.08),rgba(134,239,172,0.05));border-top:1px solid var(--border);border-bottom:1px solid var(--border);margin-top:24px;}
 .final-cta h2{font-family:"Instrument Serif",serif;font-size:clamp(36px,5vw,64px);letter-spacing:-1.5px;line-height:1.1;margin-bottom:18px;}
 .final-cta p{color:var(--muted);font-size:18px;max-width:480px;margin:0 auto 36px;line-height:1.6;}
 
@@ -232,13 +234,16 @@ footer{border-top:1px solid var(--border);padding:36px 40px;display:flex;align-i
 <!-- HERO -->
 <section class="hero">
   <div class="hero-glow"></div>
-  <a href="https://apps.apple.com/pl/app/lingobar-spanish/id6761308258?mt=12" class="badge" target="_blank" rel="noopener" style="text-decoration:none;"><span class="badge-dot"></span>Available on Mac App Store</a>
+  <a href="https://apps.apple.com/pl/app/lingobar-spanish/id6761308258?mt=12" class="btn-primary" target="_blank" rel="noopener" style="margin-bottom:28px;">
+    <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+    Download from App Store — Free
+  </a>
   <h1>Learn any language<br><em>as you work</em></h1>
   <div class="gif-demo">
     <div class="gif-frame"><img src="1s.gif" alt="LingoBar — words changing in menu bar"></div>
     <div class="gif-caption">↑ Words change automatically in your menu bar</div>
   </div>
-  <p class="hero-sub" style="margin-top:32px;">Vocabulary lives quietly in your menu bar — always visible, never in the way. Pick any language pair from 10 supported languages. A new word every few minutes, without breaking your flow.</p>
+  <p class="hero-sub" style="margin-top:32px;">Vocabulary lives quietly in your menu bar — always visible, never in the way. Pick any language pair from 12 supported languages. A new word every few minutes, without breaking your flow.</p>
   <div class="flags-strip">
     <div class="flag-pill"><span>🇪🇸</span><span>Spanish</span></div>
     <div class="flag-pill"><span>🇬🇧</span><span>English</span></div>
@@ -250,42 +255,19 @@ footer{border-top:1px solid var(--border);padding:36px 40px;display:flex;align-i
     <div class="flag-pill"><span>🇸🇪</span><span>Swedish</span></div>
     <div class="flag-pill"><span>🇭🇺</span><span>Hungarian</span></div>
     <div class="flag-pill"><span>🇷🇺</span><span>Russian</span></div>
-  </div>
-  <div class="no-ads-badge">✦ No ads — not even in the free version</div>
-  <div class="hero-cta">
-    <a href="https://apps.apple.com/pl/app/lingobar-spanish/id6761308258?mt=12" class="btn-primary" target="_blank" rel="noopener">
-      <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
-      Download from App Store — Free
-    </a>
-    <a href="https://youtu.be/U5Y4CWr1Dsg" class="btn-secondary" target="_blank" rel="noopener">
-      <span class="yt-badge"><svg viewBox="0 0 24 24"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.6A3 3 0 0 0 .5 6.2C0 8.1 0 12 0 12s0 3.9.5 5.8a3 3 0 0 0 2.1 2.1c1.9.6 9.4.6 9.4.6s7.5 0 9.4-.6a3 3 0 0 0 2.1-2.1C24 15.9 24 12 24 12s0-3.9-.5-5.8zM9.7 15.5V8.5l6.3 3.5-6.3 3.5z"/></svg> YouTube</span>
-      See how it works
-    </a>
+    <div class="flag-pill"><span>🇸🇦</span><span>Arabic</span></div>
+    <div class="flag-pill"><span>🇰🇷</span><span>Korean</span></div>
   </div>
 </section>
 
 <!-- LANGUAGE PAIRS -->
 <section class="section">
-  <div class="section-label">10 Languages</div>
+  <div class="section-label" style="font-size:16px;">12 Languages</div>
   <h2 class="section-title">Learn any pair.<br><em>Your choice.</em></h2>
   <p class="section-sub">Tell LingoBar what language you speak and what you want to learn. Switch anytime — no restart needed.</p>
-  <div class="pairs-grid">
-    <div class="pair-card">
-      <div class="pair-flags">🇬🇧 → 🇪🇸</div>
-      <div class="pair-text"><strong>English → Spanish</strong>See Spanish words, English translation</div>
-    </div>
-    <div class="pair-card">
-      <div class="pair-flags">🇵🇱 → 🇮🇹</div>
-      <div class="pair-text"><strong>Polish → Italian</strong>See Italian words, Polish translation</div>
-    </div>
-    <div class="pair-card">
-      <div class="pair-flags">🇷🇺 → 🇫🇷</div>
-      <div class="pair-text"><strong>Russian → French</strong>Any combination of all 10 languages</div>
-    </div>
-  </div>
 </section>
 
-<!-- SCREENSHOTS — 6 boxes, 3 columns -->
+<!-- SCREENSHOTS — 4 boxes, 2 columns -->
 <section class="section" id="how">
   <div class="section-label">In action</div>
   <h2 class="section-title">See it for yourself</h2>
@@ -293,50 +275,34 @@ footer{border-top:1px solid var(--border);padding:36px 40px;display:flex;align-i
   <div class="screens-grid">
 
     <div class="screen-card">
-      <img src="1s.jpg" alt="Word in menu bar with translation">
+      <img src="shot1.png" alt="Word popup with example sentence and audio">
       <div class="screen-caption">
-        <h3>Always in your menu bar</h3>
-        <p>A word in the language you're learning, right at the top of your screen all day. Show translation next to it — or keep it hidden for a daily challenge.</p>
+        <h3>A word, then a whole lesson</h3>
+        <p>A word from the language you're learning sits quietly in your menu bar. Click it for the translation, a real example sentence in both languages, and audio pronunciation — or jump straight to the next word.</p>
       </div>
     </div>
 
     <div class="screen-card">
-      <img src="2s.jpg" alt="Click to reveal translation popover with example sentence">
+      <img src="shot2.png" alt="Language menu with all supported languages">
       <div class="screen-caption">
-        <h3>Click to reveal, listen & read</h3>
-        <p>Left-click to see the full translation, hear the word pronounced, and read an example sentence in both languages. German words also show the plural form. Like a mini lesson, every time. Closes automatically.</p>
+        <h3>12 languages, any pair</h3>
+        <p>English, Spanish, Polish, German, French, Italian, Portuguese, Hungarian, Swedish, Russian, Arabic and Korean. Learn any one from any other — and switch the pair anytime from the menu.</p>
       </div>
     </div>
 
     <div class="screen-card">
-      <img src="3s.jpg" alt="Categories — Beginner and Advanced">
+      <img src="shot3.png" alt="Dashboard with progress and word management">
       <div class="screen-caption">
-        <h3>20 categories, 2 levels</h3>
-        <p>Beginner and Advanced, 20 categories — including DELE A1/A2 and B1/B2 vocabulary. Words in brackets remind you of gender and form.</p>
+        <h3>Track everything in one dashboard</h3>
+        <p>See how many words you know, manage all 1,500+ words across 23 categories, hide the ones you've mastered and tune how often each one appears — with progress tracked separately for every language pair.</p>
       </div>
     </div>
 
     <div class="screen-card">
-      <img src="4s.jpg" alt="Language pair and interval settings">
+      <img src="shot4.png" alt="Word popup in another language pair, including right-to-left">
       <div class="screen-caption">
-        <h3>Your language pair & pace</h3>
-        <p>Choose what you speak and what you want to learn. Set how often words change — every 1, 5, 10, 30, 60 or 90 minutes. Adapts to your day.</p>
-      </div>
-    </div>
-
-    <div class="screen-card">
-      <img src="5s.jpg" alt="My Words — add your own vocabulary">
-      <div class="screen-caption">
-        <h3>My Words</h3>
-        <p>Add your own vocabulary — words from class, a textbook, or anything you want to practice. Up to 200 personal words, always in rotation.</p>
-      </div>
-    </div>
-
-    <div class="screen-card">
-      <img src="6s.jpg" alt="Favorites and known words tracking">
-      <div class="screen-caption">
-        <h3>Favorites & progress</h3>
-        <p>Star words you want to master. Mark words you already know to skip them. Watch your 🏆 count grow — tracked separately for every language pair.</p>
+        <h3>The same simple flow in every language</h3>
+        <p>Exactly the same experience whatever you're learning — including right-to-left languages like Arabic. Here: a Polish speaker learning Arabic, with a full example sentence and pronunciation.</p>
       </div>
     </div>
 
@@ -385,7 +351,7 @@ footer{border-top:1px solid var(--border);padding:36px 40px;display:flex;align-i
     <div class="feature-card">
       <span class="feature-icon">🌍</span>
       <h3>Any language pair</h3>
-      <p>10 languages: Spanish, English, German, French, Italian, Portuguese, Polish, Swedish, Hungarian, Russian. Pick what you speak and what you want to learn. Switch anytime.</p>
+      <p>12 languages: Spanish, English, German, French, Italian, Portuguese, Polish, Swedish, Hungarian, Russian, Arabic and Korean. Pick what you speak and what you want to learn. Switch anytime.</p>
     </div>
     <div class="feature-card">
       <span class="feature-icon">✎</span>
@@ -393,9 +359,9 @@ footer{border-top:1px solid var(--border);padding:36px 40px;display:flex;align-i
       <p>Add your own vocabulary — words from class, a textbook, or anything you want to drill. Up to 200 personal words in rotation alongside the built-in categories.</p>
     </div>
     <div class="feature-card">
-      <span class="feature-icon">🏆</span>
-      <h3>Track your progress</h3>
-      <p>Mark words you already know and watch your count grow. Tracked separately for every language pair — so switching from Spanish to French doesn't reset your progress.</p>
+      <span class="feature-icon">📊</span>
+      <h3>Dashboard & progress</h3>
+      <p>One place to manage everything: see how many words you know, browse all 1,500+ words across 23 categories, hide the ones you've mastered and fine-tune how often each appears. Progress tracked separately for every language pair.</p>
     </div>
     <div class="feature-card">
       <span class="feature-icon">★</span>
@@ -413,9 +379,14 @@ footer{border-top:1px solid var(--border);padding:36px 40px;display:flex;align-i
       <p>German words show the article (der/die/das) and the plural form. Spanish words show gender in brackets. The details that actually make you fluent.</p>
     </div>
     <div class="feature-card">
+      <span class="feature-icon">🔊</span>
+      <h3>Hear every word & sentence</h3>
+      <p>Tap to hear the word and its example sentence read aloud. Pick your favorite system voice — and the higher-quality natural voices are supported too.</p>
+    </div>
+    <div class="feature-card">
       <span class="feature-icon">🔒</span>
       <h3>Private by design</h3>
-      <p>Zero data collection. No account, no cloud, no tracking. Everything stays on your Mac. And zero ads — not in the free version, not in premium. Ever.</p>
+      <p>Zero data collection. No account, no tracking. Everything stays on your Mac, with optional iCloud sync across your own devices. And zero ads — not in the free version, not in premium. Ever.</p>
     </div>
   </div>
 </section>
@@ -451,61 +422,18 @@ footer{border-top:1px solid var(--border);padding:36px 40px;display:flex;align-i
 })();
 </script>
 
-<!-- GIF 2 -->
-<div style="max-width:900px;margin:0 auto;padding:0 40px 52px;display:flex;flex-direction:column;align-items:center;gap:10px;">
-  <div class="gif-frame" style="width:100%;"><img src="baner2.gif" alt="LingoBar — more features in action"></div>
-  <div class="gif-caption">↑ More features in action</div>
-</div>
-
-<!-- PRICING -->
-<section class="section" id="pricing" style="max-width:900px;">
-  <div class="section-label">Pricing</div>
-  <h2 class="section-title">Start free. Go deeper for $1.99.</h2>
-  <div class="pricing-grid">
-    <!-- FREE -->
-    <div class="pricing-card">
-      <div class="plan-name">Free</div>
-      <div class="price-row"><div class="price-big">$0</div></div>
-      <div class="no-ads-row">🚫 No ads — ever</div>
-      <div class="words-count">214+ words included</div>
-      <ul class="plan-features">
-        <li>Animals, Food, Travel categories</li>
-        <li>Favorites list</li>
-        <li>My Words — up to 10 of your own</li>
-        <li>All 7 languages available</li>
-        <li>All app features: interval, translation toggle, sound, browse & filter</li>
-      </ul>
-      <a href="https://apps.apple.com/pl/app/lingobar-spanish/id6761308258?mt=12" class="btn-plan free" target="_blank" rel="noopener"> Download from App Store — Free</a>
-    </div>
-    <!-- PREMIUM -->
-    <div class="pricing-card featured">
-      <div class="plan-name">Premium</div>
-      <div class="price-row">
-        <div class="price-big">$1.99</div>
-        <div class="candy-inline">
-          <div class="candy-inline-icon">🍫</div>
-          <div class="candy-inline-text">
-            <strong>Less than a candy bar</strong>
-            <span>One-time · no subscription</span>
-          </div>
-        </div>
-      </div>
-      <div class="no-ads-row">🚫 No ads — ever</div>
-      <div class="words-count">1,300+ words · 20 categories</div>
-      <ul class="plan-features">
-        <li>All 20 word categories — Beginner & Advanced</li>
-        <li>DELE A1/A2 and B1/B2 vocabulary</li>
-        <li>My Words — up to 200 of your own</li>
-        <li>All 7 languages, any pair</li>
-        <li>All future word packs — free forever</li>
-      </ul>
-      <a href="https://apps.apple.com/pl/app/lingobar-spanish/id6761308258?mt=12" class="btn-plan premium" target="_blank" rel="noopener">Unlock Premium — $1.99</a>
-    </div>
+<!-- VIDEO -->
+<section class="section" id="video" style="max-width:900px;">
+  <div class="section-label">Watch</div>
+  <h2 class="section-title">See it in action</h2>
+  <p class="section-sub">A quick look at how LingoBar lives in your menu bar.</p>
+  <div class="video-wrap">
+    <iframe src="https://www.youtube.com/embed/U5Y4CWr1Dsg" title="LingoBar — see how it works" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
   </div>
 </section>
 
 <!-- FINAL CTA -->
-<section class="final-cta">
+<section class="final-cta" style="padding-bottom:24px;">
   <h2><em>Start learning today.</em></h2>
   <p>Free to download. No account needed.<br>Works from the first second.</p>
   <div style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap;">
